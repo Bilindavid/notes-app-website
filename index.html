@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes App</title>
+  <meta name="description" content="Notes App — a fast, private, offline notes app. Write, pin, search and organise your notes right on your device." />
+  <style>
+    :root {
+      --bg: #f5f2fb;
+      --card: #ffffff;
+      --text: #1e1b2e;
+      --muted: #6b6580;
+      --primary: #6a4bc4;
+      --primary-soft: #ede7f6;
+      --border: #e5def5;
+      --shadow: rgba(106, 75, 196, 0.12);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14121c;
+        --card: #1e1b2b;
+        --text: #efeaf7;
+        --muted: #a49dbb;
+        --primary: #b39dff;
+        --primary-soft: #262036;
+        --border: #322b47;
+        --shadow: rgba(0, 0, 0, 0.4);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+    header {
+      text-align: center;
+      padding: 72px 20px 56px;
+      background: linear-gradient(160deg, var(--primary-soft), var(--bg));
+    }
+    .logo {
+      width: 88px; height: 88px;
+      border-radius: 22px;
+      background: var(--primary);
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 44px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px var(--shadow);
+    }
+    h1 { font-size: 2.2rem; margin: 0 0 10px; }
+    .tagline { font-size: 1.15rem; color: var(--muted); margin: 0 auto; max-width: 520px; }
+    section { padding: 44px 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
+    h2 { font-size: 1.4rem; margin: 0 0 18px; }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+    .feature .ico { font-size: 26px; margin-bottom: 8px; }
+    .feature h3 { margin: 0 0 6px; font-size: 1.05rem; }
+    .feature p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    p { color: var(--text); }
+    .muted { color: var(--muted); }
+    footer {
+      text-align: center;
+      padding: 40px 20px 60px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    footer a, .links a { color: var(--primary); text-decoration: none; font-weight: 600; }
+    footer a:hover, .links a:hover { text-decoration: underline; }
+    .links {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="logo">📝</div>
+      <h1>Notes App</h1>
+      <p class="tagline">A fast, private, offline notes app. Capture your thoughts, pin what matters, and find anything in a tap — all stored securely on your own device.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <section>
+      <h2>About</h2>
+      <p>Notes App is a simple and elegant note-taking app built with React Native. It works entirely offline — your notes never leave your phone. There are no accounts to create and no sign-in required. Just open the app and start writing.</p>
+      <p class="muted">Available for Android. Supports light &amp; dark themes and multiple languages.</p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <div class="features">
+        <div class="feature">
+          <div class="ico">✍️</div>
+          <h3>Rich text notes</h3>
+          <p>Create and edit notes with formatting to organise your ideas your way.</p>
+        </div>
+        <div class="feature">
+          <div class="ico">📌</div>
+          <h3>Pin important notes</h3>
+          <p>Keep the notes that matter most right at the top.</p>
+        </div>
+        <div class="feature">
+          <div class="ico">🔍</div>
+          <h3>Instant search</h3>
+          <p>Find any note in seconds as you type.</p>
+        </div>
+        <div class="feature">
+          <div class="ico">🌓</div>
+          <h3>Light &amp; dark themes</h3>
+          <p>Comfortable reading and writing at any time of day.</p>
+        </div>
+        <div class="feature">
+          <div class="ico">🌐</div>
+          <h3>Multi-language</h3>
+          <p>Use the app in your preferred language.</p>
+        </div>
+        <div class="feature">
+          <div class="ico">🔒</div>
+          <h3>Private &amp; offline</h3>
+          <p>All data stays on your device. No ads, no tracking, no accounts.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Legal</h2>
+      <p>By using Notes App you agree to the following. Please review them at any time:</p>
+      <div class="links">
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2026 Bilin David · Notes App</p>
+    <p>Contact: <a href="mailto:bilindavid14@hotmail.com">bilindavid14@hotmail.com</a></p>
+  </footer>
+</body>
+</html>
